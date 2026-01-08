@@ -12,7 +12,7 @@ const Register = () => {
 
   const onSubmit = async (data) => {
     try {
-      const res = await API.post("/api/auth/register", data);
+      const res = await API.post("/auth/register", data);
       setUser(res.data.user);
       localStorage.setItem("token", res.data.token);
       navigate("/login"); // redirect to homepage
